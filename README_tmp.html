@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="cba-innovation-lab-code-test">CBA Innovation Lab Code Test</h1>
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li><a href="#cba-innovation-lab-code-test">CBA Innovation Lab Code Test</a>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#required-technology">Required technology</a></li>
+<li><a href="#task">Task</a></li>
+<li><a href="#instructions">Instructions</a></li>
+</ul>
+</li>
+<li><a href="#implementation">Implementation</a></li>
+<li><a href="#back-end-implementation">Back-end Implementation</a></li>
+<li><a href="#client-implementation">Client Implementation</a>
+<ul>
+<li><a href="#managing-state">Managing State</a>
+<ul>
+<li><a href="#react-state-object--setstate">React state object / setState</a></li>
+<li><a href="#props">props</a></li>
+<li><a href="#redux">Redux</a></li>
+<li><a href="#other-options-for-state-management">Other Options for State Management</a></li>
+</ul>
+</li>
+<li><a href="#open-issues">Open Issues</a>
+<ul>
+<li><a href="#tests">Tests</a></li>
+<li><a href="#programming-language-for-client">Programming Language for Client</a></li>
+<li><a href="#css-styling">CSS Styling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#install-test--and-try-out-application">Install, test and try out application</a>
+<ul>
+<li><a href="#backend--smartcontract-testing">Backend / smartcontract testing</a></li>
+<li><a href="#setup-an-ethereum-test-blockchain">Setup an Ethereum Test Blockchain</a></li>
+<li><a href="#deploy-the-smartcontract">Deploy the SmartContract</a></li>
+<li><a href="#setup-metamask">Setup MetaMask</a></li>
+<li><a href="#setup-and-start-application-server">Setup and start Application Server</a></li>
+<li><a href="#testing-the-application">Testing the Application</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>This code test is designed to give you an opportunity to experience the technical stack that you would be working on day to day in the Innovation Lab. The below is a list of required technologies that you must use in order to complete your task.</p>
+<h2 id="required-technology">Required technology</h2>
+<ul>
+<li>
+<p>Back-end technologies:</p>
+<ul>
+<li>Nodejs 10+ - vanilla ES or any compile-to-js language is fine</li>
+<li>Soliditity, the Ethereum smart contract language</li>
+<li>And of course Ethereum. Please note: DO NOT use Ethereum main or test nets</li>
+</ul>
+</li>
+<li>
+<p>Front-end technologies:</p>
+<ul>
+<li>Typescript</li>
+<li>React</li>
+<li>Redux</li>
+<li>A sensible, module-based solution to CSS - inline styles are not acceptable!</li>
+</ul>
+</li>
+</ul>
+<p>How you choose to implement both services is up to you, so long as the above technologies are incorporated into the solution.</p>
+<p>While the following list is not mandatory, you may find it helpful to start here:</p>
+<ul>
+<li><a href="https://github.com/trufflesuite/ganache-cli">Ganache</a> is the easiest way to get started with a local Ethereum node but feel free to use Geth/Parity/any other implementation</li>
+<li><a href="https://solidity.readthedocs.io/en/v0.5.0/solidity-by-example.html">Solidity by example</a> for how to write solidity smart contracts</li>
+<li><a href="https://github.com/ethereum/web3.js/">web3.js</a> or <a href="https://docs.ethers.io/ethers.js/html/">ethers.js</a> for a JS-based Ethereum client</li>
+<li><a href="https://nextjs.org/">next.js</a>, <a href="https://facebook.github.io/create-react-app/">create-react-app</a> or <a href="https://www.gatsbyjs.org/">Gatsby</a> do an excellent job of bootstrapping React application development</li>
+<li><a href="https://cssinjs.org/">JSS</a>, <a href="https://www.styled-components.com/">styled-components</a> or <a href="https://github.com/css-modules/css-modules">CSS modules</a> for module-based CSS solutions</li>
+</ul>
+<h2 id="task">Task</h2>
+<p>Create a basic gallery to display media items.</p>
+<ul>
+<li>Use a responsive fixed-width layout</li>
+<li>The app should consist of two pages:
+<ul>
+<li>A list view of gallery items
+<ul>
+<li>For desktop there should be 4 results to a row</li>
+<li>For mobile there should be 1 result per row</li>
+<li>A way to filter and/or sort by file type</li>
+</ul>
+</li>
+<li>A page to add a gallery item, consisting of:
+<ul>
+<li>URL to the gallery item</li>
+<li>Caption for the gallery item</li>
+<li>An &quot;Add&quot; button to create the item</li>
+<li>An &quot;Import dog&quot; button that will optionally populate the URL field with a result from:
+https://random.dog/woof.json</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The app should support jpg, gif, png and mp4 gallery items</li>
+<li>Use a smart contract to store gallery items (url, caption)</li>
+<li>Do not store the actual media item in the app, simply display the media items directly from the URL entered</li>
+<li>Do not worry about edit / delete features for gallery items</li>
+<li>Please include tests, use your judgement on what an appropriate amount of tests looks like</li>
+<li>Provide instructions in this README - again, use your judgement on what you think is an appropriate amount of documentation</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<ol>
+<li>Fork this repository</li>
+<li>Complete the assignment in a <code>develop</code> branch</li>
+<li>Submit a pull request from <strong>your own</strong> <code>develop</code> branch to <strong>your own</strong> <code>master</code> and add the following reviewers
+<ul>
+<li><code>e-r-w</code></li>
+</ul>
+</li>
+</ol>
+<p>If you have any questions, please raise a Github issue against this repository and tag <code>e-r-w</code> in it. If you have any privacy concerns you may alternatively contact the innovation lab directly.</p>
+<p><strong>DO NOT SUBMIT A PULL-REQUEST to the upstream repository</strong></p>
+<hr>
+<h1 id="implementation">Implementation</h1>
+<h1 id="back-end-implementation">Back-end Implementation</h1>
+<p>The smart contract has been implement in Solidity for an Ethereum Blockchain. Truffle and Ganache GUI were used as developement and test blockchains.</p>
+<h1 id="client-implementation">Client Implementation</h1>
+<p>The client has been implemented using React and Redux.</p>
+<h2 id="managing-state">Managing State</h2>
+<p>Various approaches for state management and state sharing between component were used within this project to demonstrate the different options.</p>
+<h3 id="react-state-object-setstate">React state object / setState</h3>
+<ul>
+<li>The <code>state</code> object is used to locally store state within a component and <code>setState</code>to ensure that the component, as well as child components will be re-rendered on state changes.</li>
+</ul>
+<h3 id="props">props</h3>
+<ul>
+<li>Props are used for simple propagation of parameters to child components.</li>
+</ul>
+<h3 id="redux">Redux</h3>
+<ul>
+<li>Redux is used to share the state of the filter <code>selector.js</code> component with the <code>gallery.js</code> component which displays the images, as well as for sharing the values of the input fields within <code>addImage.js</code>.</li>
+<li>Initially, Redux was also used to store the items/images within the <code>gallery.js</code> component. Redux could have been used to cache the data of the blockchain to reduce the number of requests to it. However, that would have added quite some complexity to keep the datasets in sync and (at a later stage) invalidate entries when items have been deleted.
+For this application, directly loading the list of images from the blockchain each time the gallery component is loaded is definitely not an issue.
+Also the image data, once loaded, stays anyway locally within the <code>gallery.js</code> component, which sorts and renders it according to the filter settings.
+If caching in larger applications is a requirement, then Drizzle [https://www.trufflesuite.com/drizzle] is definitely worth a look as most of the caching code on top of a Redux store is already provided out of the box.</li>
+</ul>
+<h3 id="other-options-for-state-management">Other Options for State Management</h3>
+<p>Beside that, a few interesting other technologies are available or emerging which might be interesting as alternatives or complementary approaches for state management. Just to name a few ...</p>
+<ul>
+<li><a href="https://reactjs.org/docs/context.html">React Context</a></li>
+<li><a href="https://reactjs.org/docs/hooks-intro.html">React Hooks</a></li>
+<li><a href="https://mobx.js.org">MobX</a></li>
+<li><a href="https://svelte.dev">Svelte</a></li>
+</ul>
+<h2 id="open-issues">Open Issues</h2>
+<h3 id="tests">Tests</h3>
+<ul>
+<li>The only test available for the React client is the default 'renders without crashing' test provided by create-react-app. No additional tests have been developed for the React client.</li>
+<li><a href="https://www.cypress.io/">cypress.io</a> would be an interesting option though to set up tests for browser based applications.</li>
+</ul>
+<h3 id="programming-language-for-client">Programming Language for Client</h3>
+<ul>
+<li>The project was started using JavaScript ES6/ES2015 with the intention to later migrate to TypeScript. Due to limited time, this was not addressed, but (auto-generated) TypeScript files were left within the project folder to support this process at a later time.</li>
+</ul>
+<h3 id="css-styling">CSS Styling</h3>
+<ul>
+<li>At the start of the project, Semantic ui, and later Semantic ui React were used for styling the components, which was deemed appropriate for this small application. A planned  migration at a later stage to a module-based CSS solution wasn't conducted due to lack of time.</li>
+</ul>
+<hr>
+<h1 id="install-test-and-run-application">Install, test and run application</h1>
+<p>Clone/download this repo and change into that directory.
+NodeJS is required. The code has been developed and tested with node v10.16.0</p>
+<h2 id="backend-smartcontract-testing">Backend / smartcontract testing</h2>
+<p>If Truffle is not yet available, install it either locally or global.</p>
+<pre class="hljs"><code><div>$ npm install truffle
+$ npm install -g truffle
+</div></code></pre>
+<p>Within the main directory, the JavaScript-based tests for the smartcontract can be executed. As the tests require the packages <code>truffle-assertions</code> and <code>truffle-hdwallet-provider</code> (in that order at the moment !), they need to be installed first - which can conveniently be executing in the main directory by:</p>
+<pre class="hljs"><code><div>$ npm install
+</div></code></pre>
+<p>The easiest way to execute the tests for the smartcontract is by using the Ethereum development blockchain within Truffle. Compile the smartcontract, start the test blockchain and test environment, and execute the tests.</p>
+<pre class="hljs"><code><div>$ truffle compile
+$ truffle develop
+truffle(develop)&gt; test
+</div></code></pre>
+<p>4 tests will be executed and the output should be similar to this:</p>
+<pre class="hljs"><code><div>  Contract: Gallery
+    ✓ deploys successfully
+    ✓ should add an item and return an events with new number of items (104ms)
+    ✓ should retrieve item (66ms)
+    ✓ should throw error if getItemByIndex was called with index out of bounds
+</div></code></pre>
+<hr>
+<h2 id="setup-an-ethereum-test-blockchain">Setup an Ethereum Test Blockchain</h2>
+<p>Option 1: Just leave the terminal window with the truffle console <code>truffle(develop)&gt;</code> up and running, this will provide access to the truffle development blockchain on localhost port 8545 [http://127.0.0.1:8545] by default.</p>
+<p>Option 2: Nicer and with better (visual) access to what is going on 'behind the scenes' is provided by Ganache GUI. Get it at [https://www.trufflesuite.com/ganache], install it, start it and choose 'Quickstart'. Ganache GUI will provide a development blockchain on localhost port 7545 [http://127.0.0.1:7545] by default.</p>
+<p>Both environments display a 12 word mnemonic which allow to create a wallet with access to the test accounts provided by Truffle or Ganache GUI. The defaults are:</p>
+<p>Truffle</p>
+<p><code>pill few wear village tower boat error taste awful panda entire limb</code></p>
+<p>Ganache GUI (version 2.10)</p>
+<p><code>tomorrow draft giggle design purchase daring goddess cute inquiry giant thumb journey</code></p>
+<p><strong>WARNING : NEVER use a wallet created with these mnemonics on the Ethereum mainnet with real Ether. Anybody who finds out about it (or just gives it a try) will be able to move your funds!</strong></p>
+<p>By now, a test blockchain should be up and running.</p>
+<hr>
+<h2 id="deploy-the-smartcontract">Deploy the SmartContract</h2>
+<p>Option 1 (running Truffle)</p>
+<pre class="hljs"><code><div>truffle(develop)&gt; migrate
+</div></code></pre>
+<p>Option 2 (running Ganache GUI on localhost:7545)</p>
+<p><code>truffle-config.js</code> already contains a network configuration for this setup.</p>
+<pre class="hljs"><code><div>$ truffle migrate --network localhost_7545
+</div></code></pre>
+<p>Thereafter you should see within Ganache GUI that you have spent some parts of your (test) Ether of your first account, 4 additional blocks should be mined as well as 4 transactions visible.
+If <code>truffle-config.js</code> is added as a project within the Ganache GUI Contracts tab, additional details about the contract state can be displayed.</p>
+<p><img src="https://github.com/SvenMeyer/innovation-lab-code-test/blob/develop/doc/Ganache_GUI_Contracts.png" alt="Ganache_GUI_Contracts.png"></p>
+<hr>
+<h2 id="setup-metamask">Setup MetaMask</h2>
+<p>In order to use an Ethereum Blockchain based application, a <strong><em>wallet</em></strong> to hold accounts and to (directly) interact with the blockchain is required. <strong><em>MetaMask</em></strong> is currently the most popular plug-in for a standard web browser. Get MetaMask here [https://metamask.io/] and install it in a web browser (Chrome is recommended).</p>
+<p>Open MetaMask by clicking on the orange fox icon (top right corner of the browser). Create a new wallet by choosing <code>Import using account seed phrase</code> and provide the 12 word mnemonic displayed by Truffle / Ganache GUI.</p>
+<p>Click the 'Network' drop-down on the top. If there is no pre-configured network which matches the test blockchain (Truffle: localhost:8545 / Ganache GUI localhost:7545), it has to be added by choosing [Custom RPC] within the drop-down list.</p>
+<p>Once connected to the blockchain, clicking on the top-right icon within the MetaMask pop-up should show at least one account with 100 (test) Ether.</p>
+<hr>
+<h2 id="setup-and-start-application-server">Setup and start Application Server</h2>
+<p>Open a new terminal and change into the <code>client</code> directory.
+Install the required dependencies and start the server</p>
+<pre class="hljs"><code><div>$ npm install
+$ npm start
+</div></code></pre>
+<p>This should automatically open a new window within your (default) browser on <code>localhost:3000</code>.</p>
+<p>A few seconds later, MetaMask will ask for a confirmation to connect and to make its accounts visible to the application. Either the MetaMask pop-up shows up right away or a small number next to the MetaMask icon is displayed, indicating the number of outstanding transactions to be confirmed - in this case you need to click on the icon to bring the MetaMask pop-up forward.</p>
+<p><img src="https://github.com/SvenMeyer/innovation-lab-code-test/blob/develop/doc/MetaMask_request_for_connect.png" alt="MetaMask request for connect.png"></p>
+<p>Actually, at the moment there seems to be a (possible) problem with Firefox + MetaMask, so using Chrome + MetaMask is highly recommended.</p>
+<hr>
+<h2 id="testing-the-application">Testing the Application</h2>
+<p>On the Homepage [http://localhost:3000/] you should (just) see the header menu.</p>
+<p>Type a URL of an image of your choice or generate a link to an image on [http://dog.random].
+Add a caption and write the image url &amp; caption to the blockchain by hitting the [add Image] button.
+MetaMask should pop-up again or indicate a request for a transaction confirmation by showing a '1' next to the MetaMask icon.
+Once the transaction is confirmed, you should see for a short time a browser pop-up.</p>
+<p>Choose [Gallery] from the header menu and you should see the image(s). Go back to the [add Image] page to add more images.</p>
+<p>Once a few images (actually only image URLSs) have been written to the blockchain, you can try out the filter on the Gallery page and sort the images by file extension.</p>
+<p>Videos can be played within the small 'cards'.</p>
+<p>On a mobile phone (or Chrome browser in mobile development mode), you should see the images stacked below each other.</p>
+
+</body>
+</html>

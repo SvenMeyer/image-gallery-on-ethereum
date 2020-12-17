@@ -1,0 +1,29 @@
+{
+  "name": "innovation-lab-code-test",
+  "version": "1.0.1",
+  "description": "innovation-lab-code-test",
+  "private": true,
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"use 'truffle test'\" && exit 1"
+  },
+  "author": "Sven Meyer <github_dev@SvenMeyer.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SvenMeyer/innovation-lab-code-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SvenMeyer/innovation-lab-code-test/issues"
+  },
+  "homepage": "https://github.com/SvenMeyer/innovation-lab-code-test",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "truffle-assertions": "^0.9.1",
+    "truffle-hdwallet-provider": "^1.0.14",
+    "web3": "^1.2.6"
+  }
+}

@@ -1,0 +1,44 @@
+# ignore JavaScript React npm modules
+modules/
+node_modules/
+build/
+*.log
+npm-debug.log*
+.env
+TEMP/
+temp/
+
+# ignore files build by Visual Studio
+.project
+.vscode/
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in/
+[Dd]ebug*/
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+
+# ignore xed backup files
+*.*~
+
+# ignore JetBrains IDE config folder
+.idea/
+
+.solium*
+
+# ignore thumbnails created by windows
+Thumbs.db
+
+.DS_Store
